@@ -1,0 +1,19 @@
+{
+			  "Comandos Básicos" : {
+        "`invite`" : "Convide o CornBot para seu Servidor",
+        "`help`" : "Mostra esse Comando",
+        "`slashCommands`": "Veja os comandos de Slash `NOVO`"
+        },
+        "Comandos de Moderação" : {
+        "`kick`": "Expulse um Usuário",
+        "`ban`": "Dê Ban em um Usuário",
+        "`timeout`": "Silencie alguem chato",
+        "`warn`" : "Dê um aviso para um Usuário"
+        },
+				"Comandos de Utilidades" : {
+        "`userinfo`": "Veja as Informações do Usuário",
+        "`serverinfo`": "Veja as Informações do Servidor",
+        "`emoji`": "Veja de perto um emoji!",
+        "`avatar`" : "Veja o avatar do seu Amigo!"
+        }
+}
