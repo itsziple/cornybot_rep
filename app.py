@@ -66,7 +66,7 @@ async def Help(ctx):
 
 @bot.command(name="invite")
 async def Invite(ctx):
-	invEmbed = Embed(title="Me Convide!",description="Seu servidor vai ficar mais bonito com esse bot do discord, mais seguro e mais ativo!", color=0xfc9403)
+	invEmbed = Embed(title="Me Convide!!",description="Seu servidor vai ficar mais bonito com esse bot do discord, mais seguro e mais ativo!", color=0xfc9403)
 	linkButton1 = Button(label="Convidar", url="https://discord.com/api/oauth2/authorize?client_id=972322804148097065&permissions=1636315954423&scope=bot", emoji="💌")
 
 	myview = View(timeout=200)
