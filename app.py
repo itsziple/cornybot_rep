@@ -105,10 +105,6 @@ async def help(interaction: Interaction):
     sent_msg = await interaction.response.send_message(embed=createHelpEmbed(currentPage), view=myview)
 
 
-@bot.slash_command(description="Ola, Mundo!")
-async def hello(interaction: Interaction):
-	await interaction.response.send_message("Olá! Mundo!")
-
 if __name__ == '__main__':
 	bot.run(os.environ["DISCORD_TOKEN"])
 
