@@ -87,7 +87,22 @@ async def clear(ctx, amount=0):
     else:
         await ctx.channel.purge(limit=amount)
         await ctx.message.delete()
+	await ctx.send(f":tada: | Sucesso! Limpei {amount} mensagens!")
 
+
+@bot.command(name="kick")
+@has_permissions(kick_members=True)
+async def kick(ctx, use : nextcord.User=None, *, reason=None):
+    if use == None:
+        await ctx.send(":x: | Por-favor, mencione um usuário")
+        await ctx.message.delete()
+    elif reason == None:
+        await ctx.send(":X: | Por-favor, diga uma razão")
+        await ctx.message.delete()
+    else:
+        await ctx.send(f":tada: | {use.name} Foi expulso com sucesso! Razão: {reason}")
+        await qyce.kick(reason=reason)
+        await ctx.message.delete()
 
 # Slash Commands #
 @bot.slash_command(description="Veja os Comandos do Bot!")
