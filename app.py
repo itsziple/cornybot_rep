@@ -6,6 +6,7 @@ import asyncio
 from nextcord import File, ButtonStyle, Embed, Color, SelectOption, Intents, Interaction, SlashOption, Member
 from nextcord.ui import Button, View, Select
 import nextcord
+from nextcord.ext.commands import has_permissions, CommandNotFound, MissingPermissions
 
 
 intents = nextcord.Intents.default()
@@ -73,7 +74,19 @@ async def Invite(ctx):
 	myview.add_item(linkButton1)
 
 	await ctx.send(embed=invEmbed, view=myview)
-
+	
+@bot.command(name="clear")
+@has_permissions(manage_messages=True)
+async def clear(ctx, amount=0):
+    if amount == 0 or None:
+        await ctx.send(":x: | Diga um valor de 1 a 200")
+        await ctx.message.delete()
+    elif amount > 200:
+        await ctx.send(":x: | O Máximo é: 200")
+        await ctx.message.delete()
+    else:
+        await ctx.channel.purge(limit=amount)
+        await ctx.message.delete()
 
 
 # Slash Commands #
