@@ -23,7 +23,7 @@ def createHelpEmbed(pageNum=0, inline=False):
     return embed
 
 
-activity = nextcord.Activity(type=nextcord.ActivityType.listening, name="c-help or /help")
+activity = nextcord.Activity(type=nextcord.ActivityType.listening, name="Corny! | /help")
 bot = commands.Bot(command_prefix='c-', intents=intents, activity=activity)
 bot.remove_command("help")
 
